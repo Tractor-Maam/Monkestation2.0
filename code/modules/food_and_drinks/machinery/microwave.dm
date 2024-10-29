@@ -150,7 +150,7 @@
 		var/mob/living/L = ingredient
 		var/lying_angle
 		if(istype(L))
-			lying_angle = L.lying_angle
+			lying_angle = L.get_lying_angle()
 			L.set_lying_angle(90)
 		//MONKESTATION EDIT END
 		var/image/ingredient_overlay = image(ingredient, src)
