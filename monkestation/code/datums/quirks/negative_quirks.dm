@@ -305,7 +305,7 @@
 /proc/feeble_quirk_slow_interact(mob/living/carbon/user, action, atom)
 	if(!HAS_TRAIT(user, TRAIT_FEEBLE))
 		return FALSE
-	user.visible_message(span_notice("[user] strugles to [action] [atom]."), \
+	user.visible_message(span_notice("[user] struggles to [action] [atom]."), \
 			span_notice("You struggle to [action] [atom]."))
 	return !do_after(user, 2 SECONDS, target = atom)
 

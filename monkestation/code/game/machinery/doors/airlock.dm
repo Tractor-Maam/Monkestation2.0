@@ -3,7 +3,7 @@
 		return FALSE
 	if(!feeble_callback())
 		return TRUE
-	user.visible_message(span_notice("[user] strugles to [action] the airlock."), \
+	user.visible_message(span_notice("[user] struggles to [action] the airlock."), \
 		span_notice("You struggle to [action] the airlock."))
 	return !do_after(user, 4 SECONDS, target = src, extra_checks = CALLBACK(src, TYPE_PROC_REF(/obj/machinery/door/airlock, feeble_callback)))
 
