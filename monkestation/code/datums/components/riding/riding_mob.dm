@@ -1,3 +1,10 @@
+// Carps move 4x faster when ridden in space
+/datum/component/riding/creature/carp/move_delay()
+	. = ..()
+	var/mob/living/living_parent = parent
+	if(!living_parent.has_gravity())
+		. *= 0.25
+
 /datum/component/riding/creature/human/Initialize(mob/living/riding_mob, force = FALSE, ride_check_flags = NONE, potion_boost = FALSE)
 	. = ..()
 	var/mob/living/carbon/human/human_parent = parent
