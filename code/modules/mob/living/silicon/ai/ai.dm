@@ -483,7 +483,8 @@
 		alert_control.ui_interact(src)
 #ifdef AI_VOX
 	if(href_list["say_word"])
-		play_vox_word(href_list["say_word"], null, src)
+		play_vox_word(href_list["say_word"], get_turf(src), src, vox_type) //NOVA EDIT CHANGE - ORIGINAL: play_vox_word(href_list["say_word"], null, src) //FURTHER MONKE EDIT: play_vox_word(href_list["say_word"], null, src, vox_type) >>> play_vox_word(href_list["say_word"], get_turf(src), src, vox_type)
+		vox_word_string += "[href_list["say_word"]] " //EDIT ADDITION: ALT VOX
 		return
 #endif
 	if(href_list["show_tablet_note"])

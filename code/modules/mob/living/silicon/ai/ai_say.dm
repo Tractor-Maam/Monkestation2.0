@@ -52,10 +52,10 @@
 	else
 		to_chat(src, span_alert("No holopad connected."))
 
-
+// MONKESTATION EDIT: alt AI Vox
 // Make sure that the code compiles with AI_VOX undefined
 #ifdef AI_VOX
-#define VOX_DELAY 600
+#define VOX_DELAY 600 //HEY!! Is alt vox being weird? try setting this to 300, thats what the PR i ported from did. but i dont know why they did it.
 /mob/living/silicon/ai/verb/announcement_help()
 
 	set name = "Announcement Help"
@@ -77,10 +77,10 @@
 	"}
 
 	var/index = 0
-	for(var/word in GLOB.vox_sounds)
+	for(var/word in get_vox_sounds(vox_type)) // NOVA EDIT CHANGE - VOX types - ORIGINAL: for(var/word in GLOB.vox_sounds)
 		index++
 		dat += "<A href='byond://?src=[REF(src)];say_word=[word]'>[capitalize(word)]</A>"
-		if(index != GLOB.vox_sounds.len)
+		if(index != length(get_vox_sounds(vox_type))) // NOVA EDIT CHANGE - VOX types - ORIGINAL: if(index != GLOB.vox_sounds.len)
 			dat += " / "
 
 	var/datum/browser/popup = new(src, "announce_help", "Announcement Help", 500, 400)
@@ -119,7 +119,7 @@
 		if(!word)
 			words -= word
 			continue
-		if(!GLOB.vox_sounds[word])
+		if(!get_vox_sounds(vox_type)[word]) // NOVA EDIT CHANGE - VOX types - ORIGINAL: if(!GLOB.vox_sounds[word])
 			incorrect_words += word
 
 	if(incorrect_words.len)
@@ -147,10 +147,35 @@
 
 	word = lowertext(word)
 
+	// NOVA ADDITION BEGIN - Get AI for the vox Type
+	var/turf/ai_turf_as_turf = ai_turf
+	if(!istype(ai_turf_as_turf))
+		return //and prolly throw an error because wtf
+	var/mob/living/silicon/ai/the_AI = null
+	for(var/mob/living/silicon/ai/found_AI in ai_turf_as_turf.contents)
+		if(istype(found_AI))
+			the_AI = found_AI
+	// NOVA ADDITION END
+	// NOVA EDIT CHANGE START
+	/* ORIGINAL:
 	if(GLOB.vox_sounds[word])
 
 		var/sound_file = GLOB.vox_sounds[word]
 		var/sound/voice = sound(sound_file, wait = 1, channel = CHANNEL_VOX)
+	*/
+	if(the_AI.get_vox_sounds(the_AI.vox_type)[word])
+		var/sound_file = the_AI.get_vox_sounds(the_AI.vox_type)[word]
+		var/volume = 100
+		switch(the_AI.vox_type)
+			if("Half-Life 1 VOX") //MONKE EDIT: Originally VOX_HL but defines funky, so this works, no?
+				volume = 75
+			if("Black Mesa Source Military Vox") //MONKE EDIT: Originally VOX_MIL
+				volume = 50 // My poor ears...
+		// If the vox stuff are disabled, or we failed getting the word from the list, just early return.
+		if(!sound_file)
+			return FALSE
+		var/sound/voice = sound(sound_file, wait = 1, channel = CHANNEL_VOX, volume = volume)
+	// NOVA EDIT CHANGE END
 		voice.status = SOUND_STREAM
 
 	// If there is no single listener, broadcast to everyone in the same z level
@@ -176,3 +201,4 @@
 
 #undef VOX_DELAY
 #endif
+
