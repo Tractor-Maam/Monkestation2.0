@@ -17,6 +17,8 @@
 #define FOOTSTEP_CARPET_BAREFOOT "carpetbarefoot"
 //misc footstep sounds
 #define FOOTSTEP_GENERIC_HEAVY "heavy"
+//MONKESTATION EDIT
+#define FOOTSTEP_COMBINE "combine"
 
 
 //footstep mob defines
@@ -105,6 +107,12 @@ GLOBAL_LIST_INIT(footstep, list(
 		'sound/effects/footstep/catwalk5.ogg'), 100, 1),
 	FOOTSTEP_BALL = list(list(
 		'monkestation/sound/effects/ballpit.ogg'), 100, 0),
+	FOOTSTEP_COMBINE = list(list(
+		'monkestation/sound/effects/footstep/combine1.ogg',
+		'monkestation/sound/effects/footstep/combine2.ogg',
+		'monkestation/sound/effects/footstep/combine3.ogg',
+		'monkestation/sound/effects/footstep/combine4.ogg',
+		'monkestation/sound/effects/footstep/combine5.ogg'), 20, 1),
 ))
 //bare footsteps lists
 GLOBAL_LIST_INIT(barefootstep, list(
@@ -150,6 +158,12 @@ GLOBAL_LIST_INIT(barefootstep, list(
 		'sound/effects/meatslap.ogg'), 100, 0),
 	FOOTSTEP_BALL = list(list(
 		'monkestation/sound/effects/ballpit.ogg'), 100, 0),
+	FOOTSTEP_COMBINE = list(list(
+		'monkestation/sound/effects/footstep/combine1.ogg',
+		'monkestation/sound/effects/footstep/combine2.ogg',
+		'monkestation/sound/effects/footstep/combine3.ogg',
+		'monkestation/sound/effects/footstep/combine4.ogg',
+	2'monkestation/sound/effects/footstep/combine5.ogg'), 20, 1),
 ))
 
 //claw footsteps lists
@@ -196,6 +210,12 @@ GLOBAL_LIST_INIT(clawfootstep, list(
 		'sound/effects/meatslap.ogg'), 100, 0),
 	FOOTSTEP_BALL = list(list(
 		'monkestation/sound/effects/ballpit.ogg'), 100, 0),
+	FOOTSTEP_COMBINE = list(list(
+		'monkestation/sound/effects/footstep/combine1.ogg',
+		'monkestation/sound/effects/footstep/combine2.ogg',
+		'monkestation/sound/effects/footstep/combine3.ogg',
+		'monkestation/sound/effects/footstep/combine4.ogg',
+	2'monkestation/sound/effects/footstep/combine5.ogg'), 20, 1),
 ))
 
 //heavy footsteps list
@@ -216,5 +236,11 @@ GLOBAL_LIST_INIT(heavyfootstep, list(
 		'sound/effects/meatslap.ogg'), 100, 0),
 	FOOTSTEP_BALL = list(list(
 		'monkestation/sound/effects/ballpit.ogg'), 100, 0),
+	FOOTSTEP_COMBINE = list(list(
+		'monkestation/sound/effects/footstep/combine1.ogg',
+		'monkestation/sound/effects/footstep/combine2.ogg',
+		'monkestation/sound/effects/footstep/combine3.ogg',
+		'monkestation/sound/effects/footstep/combine4.ogg',
+	2'monkestation/sound/effects/footstep/combine5.ogg'), 20, 1),
 ))
 

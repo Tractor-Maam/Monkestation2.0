@@ -7,6 +7,8 @@
 	strip_delay = 40
 	resistance_flags = NONE
 	lace_time = 12 SECONDS
+	//MONKESTATION EDIT: Combine shoe sounds
+	combine_sounds = TRUE
 
 /datum/armor/shoes_combat
 	melee = 25
@@ -46,7 +48,7 @@
 
 /obj/item/clothing/shoes/jackboots
 	name = "jackboots"
-	desc = "Nanotrasen-issue Security combat boots for combat scenarios or combat situations. All combat, all the time."
+	desc = "Nanotrasen-issue Security combat boots for combat scenarios or combat situations. All combat, all the time.\nThere seems to be some slots for Really Heavy Soles in the bottoms of these shoes. You could remove or add them by using Ctrl-Click."
 	icon_state = "jackboots"
 	inhand_icon_state = "jackboots"
 	strip_delay = 30
@@ -54,6 +56,19 @@
 	resistance_flags = NONE
 	armor_type = /datum/armor/shoes_jackboots
 	can_be_tied = FALSE
+	//MONKESTATION EDIT: Combine shoe sounds
+	combine_sounds = TRUE
+
+//MONKESTATION EDIT START
+/obj/item/clothing/shoes/jackboots/CtrlClick(mob/living/user)
+	if(!isliving(user))
+		return
+	if(user.get_active_held_item() != src)
+		to_chat(user, span_warning("You must hold the [src] in your hand to do this!"))
+		return
+	combine_sounds = !combine_sounds
+	to_chat(user, span_notice("You [combine_sounds ? "replace" : "remove"] the Really Heavy Soles."))
+//MONKESTATION EDIT END
 
 /datum/armor/shoes_jackboots
 	bio = 90

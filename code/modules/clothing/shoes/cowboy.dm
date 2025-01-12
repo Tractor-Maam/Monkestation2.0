@@ -1,11 +1,24 @@
 /obj/item/clothing/shoes/cowboy
 	name = "cowboy boots"
-	desc = "A small sticker lets you know they've been inspected for snakes, It is unclear how long ago the inspection took place..."
+	desc = "A small sticker lets you know they've been inspected for snakes, It is unclear how long ago the inspection took place...\nThere seems to be some slots for Really Heavy Soles in the bottoms of these shoes. You could remove or add them by using Ctrl-Click."
 	icon_state = "cowboy_brown"
 	armor_type = /datum/armor/shoes_cowboy
 	custom_price = PAYCHECK_CREW
 	can_be_tied = FALSE
 	var/max_occupants = 4
+	//MONKESTATION EDIT: Combine shoe sounds
+	combine_sounds = TRUE
+
+//MONKESTATION EDIT START
+/obj/item/clothing/shoes/cowboy/CtrlClick(mob/living/user)
+	if(!isliving(user))
+		return
+	if(user.get_active_held_item() != src)
+		to_chat(user, span_warning("You must hold the [src] in your hand to do this!"))
+		return
+	combine_sounds = !combine_sounds
+	to_chat(user, span_notice("You [combine_sounds ? "replace" : "remove"] the Really Heavy Soles."))
+//MONKESTATION EDIT END
 
 /datum/armor/shoes_cowboy
 	bio = 90

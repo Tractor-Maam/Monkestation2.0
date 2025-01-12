@@ -96,7 +96,7 @@
 	if(steps != 0 && !source.has_gravity()) // don't need to step as often when you hop around
 		return
 
-	. = list(FOOTSTEP_MOB_SHOE = turf.footstep, FOOTSTEP_MOB_BAREFOOT = turf.barefootstep, FOOTSTEP_MOB_HEAVY = turf.heavyfootstep, FOOTSTEP_MOB_CLAW = turf.clawfootstep, STEP_SOUND_PRIORITY = STEP_SOUND_NO_PRIORITY)
+	. = list(FOOTSTEP_MOB_SHOE = turf.footstep, FOOTSTEP_MOB_BAREFOOT = turf.barefootstep, FOOTSTEP_MOB_HEAVY = turf.heavyfootstep, FOOTSTEP_MOB_CLAW = turf.clawfootstep, FOOTSTEP_COMBINE = GLOB.footstep[FOOTSTEP_COMBINE], STEP_SOUND_PRIORITY = STEP_SOUND_NO_PRIORITY)
 	SEND_SIGNAL(turf, COMSIG_TURF_PREPARE_STEP_SOUND, .)
 	return .
 
@@ -144,6 +144,10 @@
 		// we are wearing shoes
 
 		var/shoestep_type = prepared_steps[FOOTSTEP_MOB_SHOE]
+		//MONKESTATION EDIT START: Jackboot/cowboy boot sound change
+		if(source.shoes.combine_sounds == TRUE)
+			shoestep_type = FOOTSTEP_COMBINE
+		//MONKESTATION EDIT END
 		heard_clients = playsound(source.loc, pick(footstep_sounds[shoestep_type][1]),
 			footstep_sounds[shoestep_type][2] * volume * volume_multiplier,
 			TRUE,

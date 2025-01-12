@@ -25,6 +25,8 @@
 	///An active alert
 	var/datum/weakref/our_alert_ref
 	var/footprint_sprite = FOOTPRINT_SPRITE_SHOES
+	///Whether these shoes make HL:A combine thunk thunk sounds when walking (Monkestation Edit)
+	var/combine_sounds = FALSE
 
 /datum/armor/clothing_shoes
 	bio = 50

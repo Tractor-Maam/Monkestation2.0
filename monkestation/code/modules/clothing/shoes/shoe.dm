@@ -63,10 +63,21 @@
 
 /obj/item/clothing/shoes/civilprotection_boots
 	name = "civil protection boots"
-	desc = "for the officers chasing engineers."
+	desc = "for the officers chasing engineers.\nThere seems to be some slots for Really Heavy Soles in the bottoms of these shoes. You could remove or add them by using Ctrl-Click."
 	icon = 'monkestation/icons/obj/clothing/shoes.dmi'
 	worn_icon = 'monkestation/icons/mob/clothing/feet.dmi'
 	icon_state = "civilprotection_boots"
+	combine_sounds = TRUE
+
+/obj/item/clothing/shoes/civilprotection_boots/CtrlClick(mob/living/user)
+	if(!isliving(user))
+		return
+	if(user.get_active_held_item() != src)
+		to_chat(user, span_warning("You must hold the [src] in your hand to do this!"))
+		return
+	combine_sounds = !combine_sounds
+	to_chat(user, span_notice("You [combine_sounds ? "replace" : "remove"] the Really Heavy Soles."))
+
 //START HEELS
 
 /obj/item/clothing/shoes/heels
