@@ -51,7 +51,10 @@
 	port_direction = 4;
 	dir = 8
 	},
-/turf/open/floor/mineral/titanium/white/airless,
+/turf/open/floor/catwalk_floor/titanium/Airless{
+	desc = "Stops the shuttle from vanishing into the ether, helps with onboarding too.";
+	name = "Load Bearing Catwalk"
+	},
 /area/shuttle/escape)
 "gj" = (
 /turf/open/floor/iron/dark/textured_half,
@@ -463,8 +466,10 @@
 /turf/open/floor/mineral/titanium/white/airless,
 /area/shuttle/escape)
 "OA" = (
-/obj/machinery/light/small/directional/west,
-/turf/open/floor/mineral/titanium/blue,
+/turf/open/floor/catwalk_floor/titanium/Airless{
+	desc = "Stops the shuttle from vanishing into the ether, helps with onboarding too.";
+	name = "Load Bearing Catwalk"
+	},
 /area/shuttle/escape)
 "OJ" = (
 /obj/item/storage/box/drinkingglasses,
@@ -484,6 +489,10 @@
 	dir = 8
 	},
 /area/shuttle/escape/engine)
+"OL" = (
+/obj/machinery/light/small/directional/west,
+/turf/open/floor/mineral/titanium/blue,
+/area/shuttle/escape)
 "Sf" = (
 /obj/structure/mineral_door/manual_colony_door{
 	name = "Spaceplane Airlock";
@@ -895,7 +904,7 @@ VY
 Oh
 JE
 JE
-OA
+OL
 JE
 JE
 JE
@@ -1089,13 +1098,13 @@ rE
 rE
 rE
 rE
+OA
 rE
-rE
 Os
 Os
 Os
 Os
-fj
+Os
 Os
 Os
 Os
@@ -1121,13 +1130,13 @@ rE
 rE
 rE
 rE
+OA
 rE
 rE
 rE
 rE
 rE
-rE
-rE
+OA
 rE
 rE
 rE
@@ -1153,13 +1162,13 @@ rE
 rE
 rE
 rE
+OA
 rE
 rE
 rE
 rE
 rE
-rE
-rE
+OA
 rE
 rE
 rE
@@ -1185,13 +1194,13 @@ rE
 rE
 rE
 rE
+OA
 rE
 rE
 rE
 rE
 rE
-rE
-rE
+OA
 rE
 rE
 rE
@@ -1217,13 +1226,13 @@ rE
 rE
 rE
 rE
+OA
 rE
 rE
 rE
 rE
 rE
-rE
-rE
+fj
 rE
 rE
 rE
