@@ -25,10 +25,6 @@
 /obj/structure/window/reinforced/survival_pod/spawner/directional/north,
 /turf/open/floor/plating,
 /area/shuttle/escape)
-"dv" = (
-/obj/effect/turf_decal/caution,
-/turf/open/floor/plating,
-/area/shuttle/escape)
 "dx" = (
 /obj/machinery/computer/communications,
 /turf/open/floor/mineral/titanium/white,
@@ -46,32 +42,17 @@
 /turf/open/floor/mineral/titanium/white,
 /area/shuttle/escape)
 "fj" = (
-/obj/structure/chair/comfy/shuttle{
-	dir = 8;
-	name = "wait staff seat"
+/obj/structure/chair/comfy/brown{
+	color = "#c45c57";
+	dir = 1
 	},
-/turf/open/floor/mineral/titanium/white,
+/turf/open/floor/carpet/royalblue,
 /area/shuttle/escape)
 "gj" = (
 /turf/open/floor/iron/dark/textured_half,
 /area/shuttle/escape/brig)
-"iv" = (
-/turf/closed/wall/mineral/plastitanium,
-/area/template_noop)
-"jq" = (
-/turf/closed/wall/mineral/titanium/interior,
-/area/shuttle/escape)
 "lg" = (
-/obj/structure/chair/comfy/shuttle{
-	dir = 1
-	},
-/obj/docking_port/mobile/emergency{
-	name = "Haugan emergency spaceplane";
-	port_direction = 4;
-	preferred_direction = 2;
-	dir = 2
-	},
-/turf/open/floor/mineral/titanium/white,
+/turf/closed/wall/mineral/titanium/interior,
 /area/shuttle/escape)
 "mG" = (
 /obj/structure/window/reinforced/spawner/directional/north,
@@ -109,20 +90,6 @@
 	},
 /turf/open/floor/mineral/titanium/white,
 /area/shuttle/escape)
-"oZ" = (
-/obj/structure/closet/secure_closet/medical1,
-/obj/item/stack/sheet/iron,
-/obj/item/stack/sheet/mineral/silver,
-/obj/item/storage/backpack/duffelbag/med/surgery,
-/obj/item/healthanalyzer,
-/obj/item/storage/medkit/toxin,
-/obj/item/storage/medkit/o2,
-/obj/item/storage/medkit/fire,
-/obj/item/storage/medkit/regular,
-/obj/item/storage/medkit/brute,
-/obj/item/defibrillator/loaded,
-/turf/open/floor/mineral/titanium/white,
-/area/shuttle/escape)
 "qf" = (
 /obj/machinery/door/poddoor/preopen{
 	id = "haugan-class";
@@ -133,6 +100,13 @@
 /turf/open/floor/iron/dark/textured_half{
 	dir = 8
 	},
+/area/shuttle/escape)
+"qg" = (
+/obj/structure/chair/comfy/shuttle{
+	dir = 2;
+	name = "wait staff seat"
+	},
+/turf/open/floor/mineral/titanium/white,
 /area/shuttle/escape)
 "qk" = (
 /obj/machinery/computer/emergency_shuttle,
@@ -158,12 +132,12 @@
 /turf/open/floor/plating,
 /area/shuttle/escape)
 "uI" = (
-/obj/machinery/door/poddoor/preopen{
-	id = "haugan-class";
-	dir = 8;
-	name = "poor people remover"
-	},
 /obj/effect/turf_decal/caution/stand_clear,
+/obj/machinery/door/poddoor/preopen{
+	id = "haugan-mail";
+	dir = 8;
+	name = "cargo bay door"
+	},
 /turf/open/floor/plating/reinforced,
 /area/shuttle/escape)
 "vj" = (
@@ -217,6 +191,13 @@
 	},
 /turf/open/floor/iron/dark/textured_corner,
 /area/shuttle/escape)
+"xO" = (
+/obj/structure/chair/comfy/shuttle{
+	dir = 8;
+	name = "wait staff seat"
+	},
+/turf/open/floor/mineral/titanium/white,
+/area/shuttle/escape)
 "yf" = (
 /obj/structure/closet/crate/mail,
 /obj/item/mail/junkmail,
@@ -230,6 +211,15 @@
 	},
 /turf/open/floor/iron/dark/textured_half,
 /area/shuttle/escape)
+"zU" = (
+/obj/docking_port/mobile/emergency{
+	name = "Haugan emergency spaceplane";
+	port_direction = 4;
+	preferred_direction = 2;
+	dir = 4
+	},
+/turf/template_noop,
+/area/template_noop)
 "Bs" = (
 /obj/structure/table/rolling,
 /turf/open/floor/iron/dark/textured_half,
@@ -240,6 +230,23 @@
 	name = "Shuttle HoP seat"
 	},
 /turf/open/floor/mineral/titanium,
+/area/shuttle/escape)
+"CA" = (
+/obj/structure/mineral_door/manual_colony_door{
+	name = "spaceplane airlock";
+	desc = "<i>\"Pull in case of emergency\"</i> is etched into the front, alternatively, you can open it whilst there is no emergency to create one."
+	},
+/turf/open/floor/plating,
+/area/shuttle/escape)
+"CN" = (
+/obj/effect/turf_decal/caution,
+/turf/open/floor/plating,
+/area/shuttle/escape)
+"CS" = (
+/obj/item/holosign_creator/atmos{
+	desc = "How generous!"
+	},
+/turf/open/floor/mineral/titanium/white/airless,
 /area/shuttle/escape)
 "Dh" = (
 /obj/structure/closet/crate/large{
@@ -392,23 +399,16 @@
 	dir = 8
 	},
 /area/shuttle/escape)
-"Rt" = (
-/obj/structure/chair/comfy/brown{
-	color = "#c45c57";
-	dir = 1
-	},
-/turf/open/floor/carpet/royalblue,
-/area/shuttle/escape)
 "Sf" = (
 /obj/structure/mineral_door/manual_colony_door{
 	name = "spaceplane airlock";
-	desc = "<i>\"Pull in case of emergency\"</i> is etched into the front, alternatively, you can open it whilst there is no emergency to create one."
+	desc = "<i>'Pull in case of emergency'</i> is etched into the front, alternatively, you can open it whilst there is no emergency to create one."
 	},
 /turf/open/floor/plating,
 /area/shuttle/escape)
-"SL" = (
+"Tb" = (
 /obj/item/paper/fluff{
-	default_raw_text = "<center><h1>Plane Crash!</h1><br>1 die in fireball at [GLOB.station_name]</center>";
+	default_raw_text = "<center><h1>Plane Crash!</h1><br>1 die in fireball at Nanotrasen Proving Grounds!<br><i><font color="grey">An image of a Yate Haugan Neo crashing is attached below.</font></i></center>";
 	name = "Recent Air News";
 	desc = "Unfortunate. Wonder what that implies for your shuttle.";
 	icon_state = "newspaper";
@@ -416,13 +416,6 @@
 	},
 /obj/structure/table/reinforced,
 /turf/open/floor/mineral/titanium/white,
-/area/shuttle/escape)
-"Tb" = (
-/obj/machinery/button/door/directional/west{
-	id = "haugan-class";
-	name = "poor people remover"
-	},
-/turf/open/floor/carpet/royalblue,
 /area/shuttle/escape)
 "UN" = (
 /obj/item/mail/junkmail,
@@ -447,10 +440,24 @@
 /turf/open/floor/mineral/titanium,
 /area/shuttle/escape)
 "Ym" = (
-/obj/structure/chair/comfy/shuttle{
-	dir = 2;
-	name = "wait staff seat"
+/obj/machinery/button/door/directional/west{
+	id = "haugan-class";
+	name = "poor people remover"
 	},
+/turf/open/floor/carpet/royalblue,
+/area/shuttle/escape)
+"YO" = (
+/obj/structure/closet/secure_closet/medical1,
+/obj/item/stack/sheet/iron,
+/obj/item/stack/sheet/mineral/silver,
+/obj/item/storage/backpack/duffelbag/med/surgery,
+/obj/item/healthanalyzer,
+/obj/item/storage/medkit/toxin,
+/obj/item/storage/medkit/o2,
+/obj/item/storage/medkit/fire,
+/obj/item/storage/medkit/regular,
+/obj/item/storage/medkit/brute,
+/obj/item/defibrillator/loaded,
 /turf/open/floor/mineral/titanium/white,
 /area/shuttle/escape)
 "ZH" = (
@@ -600,7 +607,7 @@ rE
 rE
 rE
 rE
-rE
+zU
 rE
 Os
 Os
@@ -632,7 +639,7 @@ rE
 rE
 Os
 Os
-Os
+CS
 Os
 Os
 Os
@@ -670,7 +677,7 @@ uG
 sT
 uG
 sT
-Sf
+CA
 sT
 uG
 sT
@@ -681,7 +688,7 @@ HX
 HX
 HX
 HX
-iv
+HX
 rE
 rE
 "}
@@ -719,12 +726,12 @@ rE
 "}
 (9,1,1) = {"
 sT
-jq
+lg
 VY
 XJ
 VY
 sT
-oZ
+YO
 VY
 vW
 Op
@@ -756,7 +763,7 @@ oc
 JI
 VY
 sT
-Ym
+qg
 VY
 vW
 Op
@@ -783,7 +790,7 @@ Jb
 "}
 (11,1,1) = {"
 uG
-SL
+Tb
 JI
 JI
 VY
@@ -810,7 +817,7 @@ at
 at
 Bs
 HX
-dv
+CN
 rE
 "}
 (12,1,1) = {"
@@ -822,9 +829,9 @@ VY
 sT
 qf
 qf
-jq
+lg
 ej
-jq
+lg
 VY
 LC
 Op
@@ -847,16 +854,16 @@ om
 "}
 (13,1,1) = {"
 sT
-jq
+lg
 VY
 ZH
 VY
 uG
 oG
 oG
-Tb
+Ym
 VY
-jq
+lg
 VY
 LC
 Op
@@ -886,11 +893,11 @@ VY
 uG
 Xr
 aE
-Rt
 fj
-jq
-VY
+xO
 lg
+VY
+LC
 Op
 LC
 Op
@@ -937,7 +944,7 @@ HX
 HX
 HX
 HX
-iv
+HX
 rE
 rE
 "}
