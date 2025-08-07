@@ -72,7 +72,7 @@
 /obj/machinery/door/poddoor/preopen{
 	id = "haugan-class";
 	dir = 1;
-	name = "poor people remover"
+	name = "Poor People Remover"
 	},
 /obj/structure/window/reinforced/shuttle,
 /turf/open/floor/iron/dark/textured_half{
@@ -277,10 +277,6 @@
 	dir = 8
 	},
 /area/shuttle/escape/engine)
-"Dt" = (
-/obj/machinery/light/small/directional/west,
-/turf/open/floor/mineral/titanium/blue,
-/area/shuttle/escape)
 "DB" = (
 /obj/item/chair/plastic{
 	pixel_y = 20
@@ -468,7 +464,7 @@
 /area/shuttle/escape)
 "OA" = (
 /obj/structure/mineral_door/manual_colony_door{
-	name = "spaceplane airlock";
+	name = "Spaceplane Airlock";
 	desc = "<i>\"Pull in case of emergency\"</i> is etched into the front, alternatively, you can open it whilst there is no emergency to create one."
 	},
 /turf/open/floor/plating,
@@ -492,11 +488,8 @@
 	},
 /area/shuttle/escape/engine)
 "Sf" = (
-/obj/structure/mineral_door/manual_colony_door{
-	name = "spaceplane airlock";
-	desc = "<i>'Pull in case of emergency'</i> is etched into the front, alternatively, you can open it whilst there is no emergency to create one."
-	},
-/turf/open/floor/plating,
+/obj/machinery/light/small/directional/west,
+/turf/open/floor/mineral/titanium/blue,
 /area/shuttle/escape)
 "Tb" = (
 /obj/structure/closet/secure_closet/medical1,
@@ -902,7 +895,7 @@ VY
 Oh
 JE
 JE
-Dt
+Sf
 JE
 JE
 JE
@@ -1032,7 +1025,7 @@ uG
 sT
 uG
 sT
-Sf
+OA
 sT
 uG
 sT
