@@ -196,7 +196,7 @@
 /obj/machinery/door/poddoor/preopen{
 	id = "haugan-mail";
 	dir = 8;
-	name = "cargo bay door"
+	name = "Cargo Bay Seal"
 	},
 /turf/open/floor/plating/reinforced,
 /area/shuttle/escape/engine)
@@ -463,11 +463,8 @@
 /turf/open/floor/mineral/titanium/white/airless,
 /area/shuttle/escape)
 "OA" = (
-/obj/structure/mineral_door/manual_colony_door{
-	name = "Spaceplane Airlock";
-	desc = "<i>\"Pull in case of emergency\"</i> is etched into the front, alternatively, you can open it whilst there is no emergency to create one."
-	},
-/turf/open/floor/plating,
+/obj/machinery/light/small/directional/west,
+/turf/open/floor/mineral/titanium/blue,
 /area/shuttle/escape)
 "OJ" = (
 /obj/item/storage/box/drinkingglasses,
@@ -488,8 +485,11 @@
 	},
 /area/shuttle/escape/engine)
 "Sf" = (
-/obj/machinery/light/small/directional/west,
-/turf/open/floor/mineral/titanium/blue,
+/obj/structure/mineral_door/manual_colony_door{
+	name = "Spaceplane Airlock";
+	desc = "<i>\"Pull in case of emergency\"</i> is etched into the front, alternatively, you can open it whilst there is no emergency to create one."
+	},
+/turf/open/floor/plating,
 /area/shuttle/escape)
 "Tb" = (
 /obj/structure/closet/secure_closet/medical1,
@@ -895,7 +895,7 @@ VY
 Oh
 JE
 JE
-Sf
+OA
 JE
 JE
 JE
@@ -1025,13 +1025,13 @@ uG
 sT
 uG
 sT
-OA
+Sf
 sT
 uG
 sT
 uG
 sT
-OA
+Sf
 sT
 uG
 sT
