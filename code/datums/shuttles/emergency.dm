@@ -465,7 +465,18 @@
 	prerequisites = "You are handling the responsibillity of dispensing EVA equipment to board."
 	extra_desc = "Please thank your junior pilot Notta Chester for piloting this to your station, First class costs 1500 credits to board." // not a jester
 	admin_notes = "Crashes into the station and centcom a bit. Has a running GPS signal. 50% of the oxygen tanks in the back contain CO2 (troll face)"
-	credit_cost = 14062 //running cost in openTTD according to https://wiki.openttd.org/en/Manual/Base%20Set/Aircraft/Yate%20Haugan
-	occupancy_limit = "33 Passengers & 20 Parcels of mail"
+	credit_cost = 14062 //running cost in openTTD (USD) according to https://wiki.openttd.org/en/Manual/Base%20Set/Aircraft/Yate%20Haugan
+	occupancy_limit = "33 passengers, 20 parcels of mail"
+
+/datum/map_template/shuttle/emergency/hauganrefitted
+	suffix = "hauganrefitted"
+	name = "Cargo Refitted Yate Haugan Neo"
+	description = "The Yate Haugan Neo was usually refitted to transport cargo goods whenever passengers were slow. \
+	while this is great for getting necessary goods to places as fast as possible, work crews on board usually complained about a lack of seating."
+	prerequisites = "You are handling the responsibillity of dispensing EVA equipment to board."
+	admin_notes = "Contains a fair amount of explosives that will entice at least one person to blow it up. Has 5 seats in the cockpit and thats basically it. Still breaches centcom and the station."
+	credit_cost = 22264 //running cost in openTTD (USD) according to https://wiki.openttd.org/en/Manual/Base%20Set/Aircraft/Yate%20Haugan plus cargo refit cost (8202 USD)
+	occupancy_limit = "60 crates of goods"
+	emag_only = TRUE
 
 #undef EMAG_LOCKED_SHUTTLE_COST
