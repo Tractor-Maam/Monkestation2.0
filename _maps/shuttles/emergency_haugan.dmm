@@ -178,7 +178,7 @@
 /area/shuttle/escape)
 "tv" = (
 /obj/item/paper/fluff{
-	default_raw_text = "<center><h1>Plane Crash!</h1><br>1 die in fireball at Nanotrasen Proving Grounds!<br><i><font color="grey">An image of a Yate Haugan Neo crashing is attached below.</font></i></center>";
+	default_raw_text = "<center><h1>Plane Crash!</h1><br>1 die in fireball at Nanotrasen Proving Grounds!<br><i><font color='grey'>An image of a Yate Haugan Neo crashing is attached below.</font></i></center>";
 	name = "Recent Air News";
 	desc = "Unfortunate. Wonder what that implies for your shuttle.";
 	icon_state = "newspaper";
@@ -221,10 +221,6 @@
 "wh" = (
 /turf/open/floor/catwalk_floor/iron_smooth,
 /area/shuttle/escape/engine)
-"wL" = (
-/obj/machinery/light/small/directional/west,
-/turf/open/floor/mineral/titanium/blue,
-/area/shuttle/escape)
 "xv" = (
 /obj/structure/closet/crate/large{
 	desc = "For you! since you must be in this class if you are willingly sitting in this room.";
@@ -281,6 +277,10 @@
 	dir = 8
 	},
 /area/shuttle/escape/engine)
+"Dt" = (
+/obj/machinery/light/small/directional/west,
+/turf/open/floor/mineral/titanium/blue,
+/area/shuttle/escape)
 "DB" = (
 /obj/item/chair/plastic{
 	pixel_y = 20
@@ -902,7 +902,7 @@ VY
 Oh
 JE
 JE
-wL
+Dt
 JE
 JE
 JE
