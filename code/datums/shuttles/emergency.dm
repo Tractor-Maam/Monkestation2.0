@@ -462,9 +462,10 @@
 	description = "The Yate Haugan Neo is the prototype that pioneered bluespace burst engines. Outfitted with First Class and a cargo hold \
 	(We need to deliver our mail in here as well, sorry for the mess), this shuttle is the premire in transit of its time. (which has long passed) \
 	Junior pilots still use these to train on large spacecraft, so we will be letting one drive it to your as a live trial."
+	prerequisites = "You are handling the responsibillity of dispensing EVA equipment to board."
 	extra_desc = "Please thank your junior pilot Notta Chester for piloting this to your station, First class costs 1500 credits to board." // not a jester
-	admin_notes = "Rich people (1 grand) get a fireaxe, crashes into the station headon."
-	credit_cost = 14062 //running cost in openTTD
+	admin_notes = "Crashes into the station and centcom a bit. Has a running GPS signal. 50% of the oxygen tanks in the back contain CO2 (troll face)"
+	credit_cost = 14062 //running cost in openTTD according to https://wiki.openttd.org/en/Manual/Base%20Set/Aircraft/Yate%20Haugan
 	occupancy_limit = "33 Passengers & 20 Parcels of mail"
 
 #undef EMAG_LOCKED_SHUTTLE_COST

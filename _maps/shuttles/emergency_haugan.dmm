@@ -3,7 +3,6 @@
 /obj/docking_port/mobile/emergency{
 	name = "Haugan emergency spaceplane";
 	port_direction = 4;
-	preferred_direction = 2;
 	dir = 4
 	},
 /turf/open/floor/catwalk_floor{
@@ -91,6 +90,16 @@
 /area/shuttle/escape)
 "lT" = (
 /obj/structure/window/reinforced/spawner/directional/south,
+/obj/item/clothing/under/suit/waiter{
+	pixel_y = 4;
+	pixel_x = -5
+	},
+/obj/item/clothing/under/suit/waiter{
+	pixel_y = 7;
+	pixel_x = -8
+	},
+/obj/item/clothing/under/costume/maid,
+/obj/item/clothing/head/costume/maidheadband,
 /turf/open/floor/catwalk_floor/iron_smooth,
 /area/shuttle/escape)
 "mG" = (
@@ -230,6 +239,11 @@
 /obj/item/food/bowled/wish,
 /turf/open/floor/iron/dark/textured_corner,
 /area/shuttle/escape)
+"xw" = (
+/obj/item/mail/junkmail,
+/obj/item/mail/junkmail,
+/turf/open/floor/catwalk_floor/iron_smooth,
+/area/shuttle/escape)
 "yf" = (
 /obj/structure/closet/crate/mail,
 /obj/item/mail/junkmail,
@@ -307,10 +321,15 @@
 	},
 /turf/open/floor/mineral/titanium/white,
 /area/shuttle/escape)
+"DP" = (
+/obj/machinery/portable_atmospherics/canister/air,
+/obj/machinery/portable_atmospherics/scrubber,
+/turf/open/floor/catwalk_floor/iron_smooth,
+/area/shuttle/escape)
 "EB" = (
 /obj/item/gps/computer/beacon{
 	name = "\improper Shuttle GPS beacon";
-	gpstag = "HJK7500"
+	gpstag = "7500"
 	},
 /turf/open/floor/mineral/titanium/white,
 /area/shuttle/escape)
@@ -331,6 +350,11 @@
 	pixel_y = 1
 	},
 /turf/open/floor/plating,
+/area/shuttle/escape)
+"Gp" = (
+/obj/structure/window/reinforced/spawner/directional/south,
+/obj/item/mail/junkmail,
+/turf/open/floor/catwalk_floor/iron_smooth,
 /area/shuttle/escape)
 "GN" = (
 /obj/structure/window/reinforced/survival_pod/spawner/directional/north,
@@ -388,9 +412,6 @@
 /obj/item/food/ready_donk/salisbury_steak,
 /obj/item/food/ready_donk/salisbury_steak,
 /obj/item/food/ready_donk/salisbury_steak,
-/obj/item/food/ready_donk,
-/obj/item/food/ready_donk,
-/obj/item/food/ready_donk,
 /obj/item/food/peanuts/salted,
 /obj/item/food/peanuts/salted,
 /obj/item/food/peanuts/wasabi,
@@ -495,8 +516,35 @@
 /turf/open/floor/mineral/titanium/white,
 /area/shuttle/escape)
 "UN" = (
-/obj/item/mail/junkmail,
-/obj/item/mail/junkmail,
+/obj/structure/closet/crate/large{
+	name = "bulk EVA supplies crate";
+	desc = "Go ahead! throw it overboard for the rest of the crew to use! Whoever ordered it probably didnt need it as much as you did."
+	},
+/obj/item/clothing/head/helmet/space/eva,
+/obj/item/clothing/head/helmet/space/eva,
+/obj/item/clothing/head/helmet/space/eva,
+/obj/item/clothing/head/helmet/space/eva,
+/obj/item/clothing/head/helmet/space/eva,
+/obj/item/clothing/head/helmet/space/eva,
+/obj/item/clothing/head/helmet/space/eva,
+/obj/item/clothing/head/helmet/space/eva,
+/obj/item/clothing/suit/space/eva,
+/obj/item/clothing/suit/space/eva,
+/obj/item/clothing/suit/space/eva,
+/obj/item/clothing/suit/space/eva,
+/obj/item/clothing/suit/space/eva,
+/obj/item/clothing/suit/space/eva/plasmaman,
+/obj/item/clothing/suit/space/eva,
+/obj/item/clothing/suit/space/eva,
+/obj/item/clothing/suit/space/eva,
+/obj/item/tank/internals/oxygen,
+/obj/item/tank/internals/oxygen,
+/obj/item/tank/jetpack/carbondioxide,
+/obj/item/tank/jetpack/carbondioxide,
+/obj/item/tank/internals/oxygen/actuallycontainscarbondioxideinstead,
+/obj/item/tank/internals/oxygen/actuallycontainscarbondioxideinstead,
+/obj/item/tank/internals/oxygen/actuallycontainscarbondioxideinstead,
+/obj/item/tank/internals/oxygen,
 /turf/open/floor/iron/dark/textured_half,
 /area/shuttle/escape)
 "VY" = (
@@ -808,7 +856,7 @@ LC
 Op
 Ml
 qq
-lT
+Gp
 mG
 gj
 aT
@@ -873,7 +921,7 @@ JE
 uI
 qq
 at
-at
+xw
 Bs
 HX
 Fl
@@ -904,7 +952,7 @@ LC
 qi
 HX
 vj
-wh
+DP
 at
 UN
 aT
