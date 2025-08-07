@@ -1,18 +1,11 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "ag" = (
-/obj/docking_port/mobile/emergency{
-	name = "Haugan emergency spaceplane";
-	port_direction = 4;
-	dir = 4
-	},
-/turf/open/floor/catwalk_floor{
-	name = "Shuttle Bearing Catwalk"
-	},
+/turf/closed/wall/mineral/titanium/nodiagonal,
 /area/shuttle/escape)
 "at" = (
 /obj/item/mail/junkmail,
 /turf/open/floor/catwalk_floor/iron_smooth,
-/area/shuttle/escape)
+/area/shuttle/escape/engine)
 "aE" = (
 /obj/structure/table/wood/fancy,
 /obj/item/reagent_containers/cup/glass/bottle/champagne{
@@ -34,7 +27,7 @@
 /obj/machinery/power/shuttle_engine/heater,
 /obj/structure/window/reinforced/survival_pod/spawner/directional/north,
 /turf/open/floor/plating,
-/area/shuttle/escape)
+/area/shuttle/escape/engine)
 "dx" = (
 /obj/machinery/computer/communications,
 /obj/machinery/light/directional/east,
@@ -53,9 +46,10 @@
 /turf/open/floor/mineral/titanium/white,
 /area/shuttle/escape)
 "fj" = (
-/obj/item/holosign_creator/atmos{
-	desc = "How generous!";
-	pixel_y = -8
+/obj/docking_port/mobile/emergency{
+	name = "Haugan emergency spaceplane";
+	port_direction = 4;
+	dir = 8
 	},
 /turf/open/floor/mineral/titanium/white/airless,
 /area/shuttle/escape)
@@ -71,12 +65,9 @@
 /turf/open/floor/mineral/titanium/white,
 /area/shuttle/escape)
 "iy" = (
-/obj/structure/chair/comfy/shuttle{
-	dir = 8;
-	name = "wait staff seat"
-	},
-/turf/open/floor/mineral/titanium/white,
-/area/shuttle/escape)
+/obj/machinery/power/shuttle_engine/propulsion/right,
+/turf/open/floor/plating,
+/area/shuttle/escape/engine)
 "lg" = (
 /obj/machinery/door/poddoor/preopen{
 	id = "haugan-class";
@@ -101,7 +92,7 @@
 /obj/item/clothing/under/costume/maid,
 /obj/item/clothing/head/costume/maidheadband,
 /turf/open/floor/catwalk_floor/iron_smooth,
-/area/shuttle/escape)
+/area/shuttle/escape/engine)
 "mG" = (
 /turf/open/floor/catwalk_floor/iron_smooth,
 /area/shuttle/escape/brig)
@@ -129,18 +120,20 @@
 /turf/open/floor/iron/dark/textured_half{
 	dir = 8
 	},
-/area/shuttle/escape)
+/area/shuttle/escape/engine)
 "om" = (
-/obj/machinery/power/shuttle_engine/large,
-/turf/open/floor/plating,
+/obj/item/holosign_creator/atmos{
+	desc = "How generous!";
+	pixel_y = -8
+	},
+/turf/open/floor/mineral/titanium/white,
 /area/shuttle/escape)
 "oG" = (
-/obj/machinery/button/door/directional/west{
-	id = "haugan-class";
-	name = "poor people remover"
+/obj/structure/chair/comfy/shuttle{
+	dir = 4;
+	name = "wait staff seat"
 	},
-/obj/machinery/light/directional/west,
-/turf/open/floor/carpet/royalblue,
+/turf/open/floor/mineral/titanium/white,
 /area/shuttle/escape)
 "oL" = (
 /obj/machinery/computer/crew{
@@ -170,7 +163,7 @@
 /area/shuttle/escape)
 "qq" = (
 /turf/open/floor/iron/dark/textured_half,
-/area/shuttle/escape)
+/area/shuttle/escape/engine)
 "rE" = (
 /turf/template_noop,
 /area/template_noop)
@@ -206,7 +199,7 @@
 	name = "cargo bay door"
 	},
 /turf/open/floor/plating/reinforced,
-/area/shuttle/escape)
+/area/shuttle/escape/engine)
 "vj" = (
 /obj/structure/closet/crate/mail,
 /obj/item/mail/junkmail,
@@ -216,7 +209,7 @@
 /obj/item/mail/junkmail,
 /obj/machinery/light/directional/north,
 /turf/open/floor/iron/dark/textured_half,
-/area/shuttle/escape)
+/area/shuttle/escape/engine)
 "vW" = (
 /obj/structure/chair/comfy/shuttle{
 	dir = 1;
@@ -227,7 +220,7 @@
 /area/shuttle/escape)
 "wh" = (
 /turf/open/floor/catwalk_floor/iron_smooth,
-/area/shuttle/escape)
+/area/shuttle/escape/engine)
 "xv" = (
 /obj/structure/closet/crate/large{
 	desc = "For you! since you must be in this class if you are willingly sitting in this room.";
@@ -238,12 +231,12 @@
 /mob/living/basic/mouse/rat,
 /obj/item/food/bowled/wish,
 /turf/open/floor/iron/dark/textured_corner,
-/area/shuttle/escape)
+/area/shuttle/escape/engine)
 "xw" = (
 /obj/item/mail/junkmail,
 /obj/item/mail/junkmail,
 /turf/open/floor/catwalk_floor/iron_smooth,
-/area/shuttle/escape)
+/area/shuttle/escape/engine)
 "yf" = (
 /obj/structure/closet/crate/mail,
 /obj/item/mail/junkmail,
@@ -257,12 +250,12 @@
 	},
 /obj/machinery/light/directional/north,
 /turf/open/floor/iron/dark/textured_half,
-/area/shuttle/escape)
+/area/shuttle/escape/engine)
 "Bs" = (
 /obj/structure/table/rolling,
 /obj/machinery/light/directional/south,
 /turf/open/floor/iron/dark/textured_half,
-/area/shuttle/escape)
+/area/shuttle/escape/engine)
 "BQ" = (
 /obj/structure/chair/comfy/shuttle{
 	dir = 1;
@@ -285,7 +278,7 @@
 /turf/open/floor/iron/dark/textured_half{
 	dir = 8
 	},
-/area/shuttle/escape)
+/area/shuttle/escape/engine)
 "DB" = (
 /obj/item/chair/plastic{
 	pixel_y = 20
@@ -295,7 +288,7 @@
 /turf/open/floor/iron/dark/textured_corner{
 	dir = 8
 	},
-/area/shuttle/escape)
+/area/shuttle/escape/engine)
 "DI" = (
 /obj/structure/window/reinforced/spawner/directional/east,
 /obj/structure/window/reinforced/spawner/directional/north,
@@ -325,6 +318,14 @@
 /obj/machinery/portable_atmospherics/canister/air,
 /obj/machinery/portable_atmospherics/scrubber,
 /turf/open/floor/catwalk_floor/iron_smooth,
+/area/shuttle/escape/engine)
+"DY" = (
+/obj/machinery/light/directional/east,
+/obj/machinery/button/door/directional/east{
+	id = "haugan-class";
+	name = "poor people sight remover"
+	},
+/turf/open/floor/carpet/royalblue,
 /area/shuttle/escape)
 "EB" = (
 /obj/item/gps/computer/beacon{
@@ -342,31 +343,25 @@
 /turf/open/floor/catwalk_floor/iron_smooth,
 /area/shuttle/escape/brig)
 "Fl" = (
-/obj/effect/turf_decal/caution,
-/obj/item/toy/plush/lobotomy/bongbong{
-	desc = "This isn't it's airline."
-	},
-/obj/item/chair/plastic{
-	pixel_y = 1
-	},
-/turf/open/floor/plating,
-/area/shuttle/escape)
+/turf/closed/wall/mineral/plastitanium,
+/area/shuttle/escape/engine)
 "Gp" = (
 /obj/structure/window/reinforced/spawner/directional/south,
 /obj/item/mail/junkmail,
 /turf/open/floor/catwalk_floor/iron_smooth,
-/area/shuttle/escape)
+/area/shuttle/escape/engine)
 "GN" = (
 /obj/structure/window/reinforced/survival_pod/spawner/directional/north,
 /obj/machinery/light/small/directional/west,
 /turf/open/floor/mineral/titanium/white,
 /area/shuttle/escape)
 "HX" = (
-/turf/closed/wall/mineral/plastitanium,
-/area/shuttle/escape)
+/turf/closed/wall/mineral/plastitanium/nodiagonal,
+/area/shuttle/escape/engine)
 "Jb" = (
+/obj/machinery/power/shuttle_engine/propulsion/left,
 /turf/open/floor/plating,
-/area/shuttle/escape)
+/area/shuttle/escape/engine)
 "Jf" = (
 /turf/open/floor/iron/dark/textured_half{
 	dir = 8
@@ -425,7 +420,7 @@
 /obj/item/storage/cans/sixsoda,
 /obj/item/storage/cans/sixsoda,
 /turf/open/floor/iron/dark/textured_half,
-/area/shuttle/escape)
+/area/shuttle/escape/engine)
 "LC" = (
 /obj/structure/chair/comfy/shuttle{
 	dir = 1
@@ -439,7 +434,7 @@
 	},
 /obj/effect/mapping_helpers/airlock/access/any/security/general,
 /turf/open/floor/plating/reinforced,
-/area/shuttle/escape)
+/area/shuttle/escape/engine)
 "MP" = (
 /obj/machinery/light/small/directional/west,
 /turf/open/floor/mineral/titanium/white,
@@ -453,7 +448,7 @@
 /turf/open/floor/iron/dark/textured_corner{
 	dir = 1
 	},
-/area/shuttle/escape)
+/area/shuttle/escape/engine)
 "Oh" = (
 /obj/machinery/door/airlock/command{
 	name = "Cockpit"
@@ -492,7 +487,7 @@
 /turf/open/floor/iron/dark/textured_half{
 	dir = 8
 	},
-/area/shuttle/escape)
+/area/shuttle/escape/engine)
 "Sf" = (
 /obj/structure/mineral_door/manual_colony_door{
 	name = "spaceplane airlock";
@@ -546,7 +541,7 @@
 /obj/item/tank/internals/oxygen/actuallycontainscarbondioxideinstead,
 /obj/item/tank/internals/oxygen,
 /turf/open/floor/iron/dark/textured_half,
-/area/shuttle/escape)
+/area/shuttle/escape/engine)
 "VY" = (
 /turf/open/floor/mineral/titanium/white,
 /area/shuttle/escape)
@@ -714,7 +709,7 @@ rE
 rE
 rE
 rE
-ag
+rE
 rE
 Os
 Os
@@ -746,7 +741,7 @@ rE
 rE
 Os
 Os
-fj
+Os
 Os
 Os
 Os
@@ -778,24 +773,24 @@ uG
 sT
 uG
 sT
-Sf
+uG
+sT
+uG
 sT
 uG
 sT
 uG
 sT
-OA
-sT
 uG
 sT
 uG
 sT
 HX
-HX
-HX
-HX
-HX
-HX
+Fl
+Fl
+Fl
+Fl
+Fl
 rE
 rE
 "}
@@ -806,50 +801,50 @@ uG
 tp
 EB
 sT
-VY
-MP
-vW
-Op
-VY
-MP
-LC
-GN
-vW
-Op
-VY
+Xr
+aE
+BS
+oG
+qf
 MP
 LC
 GN
 LC
 Op
-HX
+LC
+Op
+LC
+GN
+LC
+Op
+Fl
 xv
 oi
 Jf
 Jv
-HX
-HX
+Fl
+Fl
 rE
 "}
 (9,1,1) = {"
 sT
-qf
+ag
 iw
 XJ
 VY
 sT
-Tb
+Ym
+Ym
+DY
 VY
-vW
-Op
-VY
+qf
 VY
 LC
 Op
-vW
+LC
 Op
-VY
-VY
+LC
+Op
 LC
 Op
 LC
@@ -861,7 +856,7 @@ mG
 gj
 aT
 Jb
-om
+rE
 "}
 (10,1,1) = {"
 uG
@@ -870,30 +865,30 @@ oc
 JI
 VY
 sT
-pD
-VY
-vW
-Op
-VY
+lg
+lg
+qf
+ej
+qf
 VY
 LC
 Op
-vW
+LC
 Op
-VY
-VY
+LC
+Op
 LC
 Op
 LC
 qi
-HX
+Fl
 yf
 lT
 Fa
 DI
 aT
 Jb
-Jb
+rE
 "}
 (11,1,1) = {"
 uG
@@ -923,9 +918,9 @@ qq
 at
 xw
 Bs
-HX
 Fl
-rE
+Fl
+Fl
 "}
 (12,1,1) = {"
 uG
@@ -934,11 +929,11 @@ BQ
 JI
 VY
 sT
-lg
-lg
-qf
-ej
-qf
+VY
+MP
+vW
+Op
+VY
 VY
 LC
 Op
@@ -950,27 +945,27 @@ LC
 Op
 LC
 qi
-HX
+Fl
 vj
 DP
 at
 UN
 aT
-Jb
-om
+iy
+rE
 "}
 (13,1,1) = {"
 sT
-qf
+ag
 iw
 ZH
 VY
 uG
-Ym
-Ym
-oG
+Tb
 VY
-qf
+vW
+Op
+VY
 VY
 LC
 Op
@@ -988,8 +983,8 @@ at
 wh
 Ki
 aT
-Jb
-Jb
+iy
+rE
 "}
 (14,1,1) = {"
 rE
@@ -998,11 +993,11 @@ uG
 oL
 DK
 uG
-Xr
-aE
-BS
-iy
-qf
+pD
+VY
+vW
+Op
+om
 hc
 LC
 nE
@@ -1014,13 +1009,13 @@ LC
 nE
 LC
 Op
-HX
+Fl
 DB
 OJ
 Dh
 Nn
-HX
-HX
+Fl
+Fl
 rE
 "}
 (15,1,1) = {"
@@ -1034,24 +1029,24 @@ uG
 sT
 uG
 sT
-uG
+Sf
 sT
 uG
 sT
 uG
 sT
-uG
+OA
 sT
 uG
 sT
 uG
 sT
 HX
-HX
-HX
-HX
-HX
-HX
+Fl
+Fl
+Fl
+Fl
+Fl
 rE
 rE
 "}
@@ -1104,7 +1099,7 @@ Os
 Os
 Os
 Os
-Os
+fj
 Os
 Os
 Os
