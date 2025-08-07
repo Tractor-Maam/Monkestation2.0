@@ -6,8 +6,10 @@
 	preferred_direction = 2;
 	dir = 4
 	},
-/turf/template_noop,
-/area/template_noop)
+/turf/open/floor/catwalk_floor{
+	name = "Shuttle Bearing Catwalk"
+	},
+/area/shuttle/escape)
 "at" = (
 /obj/item/mail/junkmail,
 /turf/open/floor/catwalk_floor/iron_smooth,
@@ -36,6 +38,7 @@
 /area/shuttle/escape)
 "dx" = (
 /obj/machinery/computer/communications,
+/obj/machinery/light/directional/east,
 /turf/open/floor/mineral/titanium/white,
 /area/shuttle/escape)
 "ej" = (
@@ -60,6 +63,14 @@
 "gj" = (
 /turf/open/floor/iron/dark/textured_half,
 /area/shuttle/escape/brig)
+"hc" = (
+/obj/machinery/light/small/directional/east,
+/turf/open/floor/mineral/titanium/white,
+/area/shuttle/escape)
+"iw" = (
+/obj/machinery/light/directional/north,
+/turf/open/floor/mineral/titanium/white,
+/area/shuttle/escape)
 "iy" = (
 /obj/structure/chair/comfy/shuttle{
 	dir = 8;
@@ -78,10 +89,18 @@
 	dir = 8
 	},
 /area/shuttle/escape)
+"lT" = (
+/obj/structure/window/reinforced/spawner/directional/south,
+/turf/open/floor/catwalk_floor/iron_smooth,
+/area/shuttle/escape)
 "mG" = (
-/obj/structure/window/reinforced/spawner/directional/north,
 /turf/open/floor/catwalk_floor/iron_smooth,
 /area/shuttle/escape/brig)
+"nE" = (
+/obj/structure/window/reinforced/survival_pod/spawner/directional/north,
+/obj/machinery/light/small/directional/east,
+/turf/open/floor/mineral/titanium/white,
+/area/shuttle/escape)
 "oc" = (
 /obj/structure/chair/comfy/shuttle{
 	dir = 1;
@@ -97,6 +116,7 @@
 /obj/item/mail/junkmail,
 /obj/item/mail/junkmail,
 /obj/item/mail/junkmail,
+/obj/structure/window/reinforced/spawner/directional/south,
 /turf/open/floor/iron/dark/textured_half{
 	dir = 8
 	},
@@ -110,6 +130,7 @@
 	id = "haugan-class";
 	name = "poor people remover"
 	},
+/obj/machinery/light/directional/west,
 /turf/open/floor/carpet/royalblue,
 /area/shuttle/escape)
 "oL" = (
@@ -128,8 +149,14 @@
 "qf" = (
 /turf/closed/wall/mineral/titanium/interior,
 /area/shuttle/escape)
+"qi" = (
+/obj/structure/window/reinforced/survival_pod/spawner/directional/north,
+/obj/machinery/light/directional/south,
+/turf/open/floor/mineral/titanium/white,
+/area/shuttle/escape)
 "qk" = (
 /obj/machinery/computer/emergency_shuttle,
+/obj/machinery/light/directional/west,
 /turf/open/floor/mineral/titanium/white,
 /area/shuttle/escape)
 "qq" = (
@@ -178,6 +205,7 @@
 /obj/item/mail/junkmail,
 /obj/item/mail/junkmail,
 /obj/item/mail/junkmail,
+/obj/machinery/light/directional/north,
 /turf/open/floor/iron/dark/textured_half,
 /area/shuttle/escape)
 "vW" = (
@@ -199,27 +227,7 @@
 /obj/item/reagent_containers/cup/glass/bottle/beer/light,
 /obj/item/knife/combat,
 /mob/living/basic/mouse/rat,
-/obj/item/bodypart/arm/left{
-	pixel_y = 4;
-	pixel_x = 6
-	},
-/obj/item/bodypart/arm/right{
-	pixel_y = 4;
-	pixel_x = -8
-	},
-/obj/item/bodypart/leg/right{
-	pixel_y = -7;
-	pixel_x = -7
-	},
-/obj/item/bodypart/leg/left{
-	pixel_y = -6;
-	pixel_x = 4
-	},
-/obj/item/organ/internal/heart,
-/obj/item/organ/internal/bladder{
-	pixel_y = -5;
-	pixel_x = -4
-	},
+/obj/item/food/bowled/wish,
 /turf/open/floor/iron/dark/textured_corner,
 /area/shuttle/escape)
 "yf" = (
@@ -233,10 +241,12 @@
 	id = "haugan-mail";
 	name = "cargo door controller"
 	},
+/obj/machinery/light/directional/north,
 /turf/open/floor/iron/dark/textured_half,
 /area/shuttle/escape)
 "Bs" = (
 /obj/structure/table/rolling,
+/obj/machinery/light/directional/south,
 /turf/open/floor/iron/dark/textured_half,
 /area/shuttle/escape)
 "BQ" = (
@@ -289,8 +299,22 @@
 	},
 /turf/open/floor/iron/dark/textured_half,
 /area/shuttle/escape/brig)
+"DK" = (
+/obj/machinery/modular_computer/preset/cargochat{
+	name = "ATC chatroom console";
+	console_department = "bingbing_airlines";
+	dir = 8
+	},
+/turf/open/floor/mineral/titanium/white,
+/area/shuttle/escape)
+"EB" = (
+/obj/item/gps/computer/beacon{
+	name = "\improper Shuttle GPS beacon";
+	gpstag = "HJK7500"
+	},
+/turf/open/floor/mineral/titanium/white,
+/area/shuttle/escape)
 "Fa" = (
-/obj/structure/window/reinforced/spawner/directional/north,
 /obj/machinery/door/airlock/security/glass{
 	name = "Brig";
 	desc = "An impromptu, quickly constructed 'Holding Cell' for unruly passengers. Also doubles as a interrogation room.";
@@ -300,7 +324,18 @@
 /area/shuttle/escape/brig)
 "Fl" = (
 /obj/effect/turf_decal/caution,
+/obj/item/toy/plush/lobotomy/bongbong{
+	desc = "This isn't it's airline."
+	},
+/obj/item/chair/plastic{
+	pixel_y = 1
+	},
 /turf/open/floor/plating,
+/area/shuttle/escape)
+"GN" = (
+/obj/structure/window/reinforced/survival_pod/spawner/directional/north,
+/obj/machinery/light/small/directional/west,
+/turf/open/floor/mineral/titanium/white,
 /area/shuttle/escape)
 "HX" = (
 /turf/closed/wall/mineral/plastitanium,
@@ -309,7 +344,6 @@
 /turf/open/floor/plating,
 /area/shuttle/escape)
 "Jf" = (
-/obj/structure/window/reinforced/spawner/directional/north,
 /turf/open/floor/iron/dark/textured_half{
 	dir = 8
 	},
@@ -318,6 +352,9 @@
 /obj/structure/flippedtable,
 /obj/item/flashlight/lamp,
 /obj/effect/decal/cleanable/blood,
+/obj/item/food/badrecipe{
+	desc = "Must be super super economy."
+	},
 /turf/open/floor/iron/dark/textured_corner{
 	dir = 4
 	},
@@ -354,6 +391,18 @@
 /obj/item/food/ready_donk,
 /obj/item/food/ready_donk,
 /obj/item/food/ready_donk,
+/obj/item/food/peanuts/salted,
+/obj/item/food/peanuts/salted,
+/obj/item/food/peanuts/wasabi,
+/obj/item/food/peanuts/wasabi,
+/obj/item/food/peanuts/honey_roasted,
+/obj/item/food/peanuts/honey_roasted,
+/obj/item/food/peanuts/barbecue,
+/obj/item/food/peanuts/barbecue,
+/obj/item/food/peanuts,
+/obj/item/food/peanuts,
+/obj/item/storage/cans/sixsoda,
+/obj/item/storage/cans/sixsoda,
 /turf/open/floor/iron/dark/textured_half,
 /area/shuttle/escape)
 "LC" = (
@@ -369,6 +418,10 @@
 	},
 /obj/effect/mapping_helpers/airlock/access/any/security/general,
 /turf/open/floor/plating/reinforced,
+/area/shuttle/escape)
+"MP" = (
+/obj/machinery/light/small/directional/west,
+/turf/open/floor/mineral/titanium/white,
 /area/shuttle/escape)
 "Nn" = (
 /obj/structure/chair/plastic{
@@ -411,6 +464,10 @@
 /obj/item/food/bearsteak,
 /obj/item/food/bbqribs,
 /obj/item/food/cake/bscc,
+/obj/item/food/bonbon/chocolate_truffle,
+/obj/item/food/bonbon/chocolate_truffle,
+/obj/item/food/bonbon/caramel_truffle,
+/obj/item/food/bonbon/caramel_truffle,
 /turf/open/floor/iron/dark/textured_half{
 	dir = 8
 	},
@@ -434,6 +491,7 @@
 /obj/item/storage/medkit/regular,
 /obj/item/storage/medkit/brute,
 /obj/item/defibrillator/loaded,
+/obj/machinery/light/directional/north,
 /turf/open/floor/mineral/titanium/white,
 /area/shuttle/escape)
 "UN" = (
@@ -698,22 +756,22 @@ rE
 sT
 uG
 tp
-VY
+EB
 sT
 VY
-VY
+MP
 vW
 Op
 VY
-VY
+MP
 LC
-Op
+GN
 vW
 Op
 VY
-VY
+MP
 LC
-Op
+GN
 LC
 Op
 HX
@@ -728,7 +786,7 @@ rE
 (9,1,1) = {"
 sT
 qf
-VY
+iw
 XJ
 VY
 sT
@@ -750,7 +808,7 @@ LC
 Op
 Ml
 qq
-wh
+lT
 mG
 gj
 aT
@@ -779,10 +837,10 @@ VY
 LC
 Op
 LC
-Op
+qi
 HX
 yf
-wh
+lT
 Fa
 DI
 aT
@@ -843,7 +901,7 @@ VY
 LC
 Op
 LC
-Op
+qi
 HX
 vj
 wh
@@ -856,7 +914,7 @@ om
 (13,1,1) = {"
 sT
 qf
-VY
+iw
 ZH
 VY
 uG
@@ -890,22 +948,22 @@ rE
 sT
 uG
 oL
-VY
+DK
 uG
 Xr
 aE
 BS
 iy
 qf
-VY
+hc
 LC
-Op
+nE
 LC
-Op
+nE
 VY
-VY
+hc
 LC
-Op
+nE
 LC
 Op
 HX
