@@ -46,15 +46,7 @@
 /turf/open/floor/mineral/titanium/white,
 /area/shuttle/escape)
 "fj" = (
-/obj/docking_port/mobile/emergency{
-	name = "Haugan emergency spaceplane";
-	port_direction = 4;
-	dir = 8
-	},
-/turf/open/floor/catwalk_floor/titanium/Airless{
-	desc = "Stops the shuttle from vanishing into the ether, helps with onboarding too.";
-	name = "Load Bearing Catwalk"
-	},
+/turf/open/floor/catwalk_floor/titanium/Airless,
 /area/shuttle/escape)
 "gj" = (
 /turf/open/floor/iron/dark/textured_half,
@@ -130,6 +122,10 @@
 	pixel_y = -8
 	},
 /turf/open/floor/mineral/titanium/white,
+/area/shuttle/escape)
+"oE" = (
+/obj/machinery/light/small/directional/west,
+/turf/open/floor/mineral/titanium/blue,
 /area/shuttle/escape)
 "oG" = (
 /obj/structure/chair/comfy/shuttle{
@@ -466,10 +462,12 @@
 /turf/open/floor/mineral/titanium/white/airless,
 /area/shuttle/escape)
 "OA" = (
-/turf/open/floor/catwalk_floor/titanium/Airless{
-	desc = "Stops the shuttle from vanishing into the ether, helps with onboarding too.";
-	name = "Load Bearing Catwalk"
+/obj/docking_port/mobile/emergency{
+	name = "Haugan emergency spaceplane";
+	port_direction = 4;
+	dir = 8
 	},
+/turf/open/floor/catwalk_floor/titanium/Airless,
 /area/shuttle/escape)
 "OJ" = (
 /obj/item/storage/box/drinkingglasses,
@@ -489,14 +487,10 @@
 	dir = 8
 	},
 /area/shuttle/escape/engine)
-"OL" = (
-/obj/machinery/light/small/directional/west,
-/turf/open/floor/mineral/titanium/blue,
-/area/shuttle/escape)
 "Sf" = (
 /obj/structure/mineral_door/manual_colony_door{
 	name = "Spaceplane Airlock";
-	desc = "<i>\"Pull in case of emergency\"</i> is etched into the front, alternatively, you can open it whilst there is no emergency to create one."
+	desc = "<i>Pull in case of emergency</i> is etched into the front, alternatively, you can open it whilst there is no emergency to create one."
 	},
 /turf/open/floor/plating,
 /area/shuttle/escape)
@@ -805,7 +799,7 @@ sT
 uG
 tp
 EB
-sT
+uG
 Xr
 aE
 BS
@@ -837,7 +831,7 @@ ag
 iw
 XJ
 VY
-sT
+uG
 Ym
 Ym
 DY
@@ -904,7 +898,7 @@ VY
 Oh
 JE
 JE
-OL
+oE
 JE
 JE
 JE
@@ -965,7 +959,7 @@ ag
 iw
 ZH
 VY
-uG
+sT
 Tb
 VY
 vW
@@ -997,7 +991,7 @@ sT
 uG
 oL
 DK
-uG
+sT
 pD
 VY
 vW
@@ -1098,7 +1092,7 @@ rE
 rE
 rE
 rE
-OA
+fj
 rE
 Os
 Os
@@ -1130,13 +1124,13 @@ rE
 rE
 rE
 rE
-OA
+fj
 rE
 rE
 rE
 rE
 rE
-OA
+fj
 rE
 rE
 rE
@@ -1162,13 +1156,13 @@ rE
 rE
 rE
 rE
-OA
+fj
 rE
 rE
 rE
 rE
 rE
-OA
+fj
 rE
 rE
 rE
@@ -1194,13 +1188,13 @@ rE
 rE
 rE
 rE
-OA
+fj
 rE
 rE
 rE
 rE
 rE
-OA
+fj
 rE
 rE
 rE
@@ -1226,13 +1220,13 @@ rE
 rE
 rE
 rE
-OA
-rE
-rE
-rE
-rE
-rE
 fj
+rE
+rE
+rE
+rE
+rE
+OA
 rE
 rE
 rE
