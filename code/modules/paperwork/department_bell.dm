@@ -20,6 +20,7 @@
 
 /obj/structure/desk_bell/departmental/Initialize(mapload)
 	. = ..()
+	set_anchored(TRUE)
 	radio = new(src)
 	radio.canhear_range = 0
 	radio.set_listening(FALSE)
@@ -31,6 +32,16 @@
 
 /obj/structure/desk_bell/departmental/wrench_act_secondary(mob/living/user, obj/item/tool)
 	balloon_alert(user, "indestructable!") //Nothing.
+	return FALSE
+
+/obj/structure/desk_bell/screwdriver_act(mob/living/user, obj/item/tool) //they cant break, so screwdriver anchors it
+	balloon_alert(user, "[anchored ? "un" : ""]securing...")
+	tool.play_tool_sound(src)
+	if(tool.use_tool(src, user, 10 SECONDS)) //twice as long as machine frames, those are REVERSE screws your average spaceman isnt prepared for that!.
+		balloon_alert(user, "[anchored ? "un" : ""]secured")
+		set_anchored(!anchored)
+		tool.play_tool_sound(src)
+		return TOOL_ACT_TOOLTYPE_SUCCESS
 	return FALSE
 
 /obj/structure/desk_bell/departmental/check_clapper(mob/living/user)
