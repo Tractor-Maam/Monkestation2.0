@@ -28,6 +28,7 @@
 	. = ..()
 
 	if(held_item?.tool_behaviour == TOOL_WRENCH)
+		context[SCREENTIP_CONTEXT_LMB] = "Secure"
 		context[SCREENTIP_CONTEXT_RMB] = "Disassemble"
 		return CONTEXTUAL_SCREENTIP_SET
 

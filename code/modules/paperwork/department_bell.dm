@@ -17,6 +17,9 @@
 	var/radio_channel = FREQ_COMMON
 	///Location of bell to be used in the announcement.
 	var/bell_location = "Front Desk"
+	// doesnt stop you from stealing the bell, just doesnt mean you can ring it every minute without consequence.
+	var/antitheft = FALSE
+	var/starting_location
 
 /obj/structure/desk_bell/departmental/Initialize(mapload)
 	. = ..()
@@ -29,6 +32,7 @@
 	radio.freqlock = RADIO_FREQENCY_LOCKED
 	radio.command = TRUE // >I think high volume but with a longer delay is a good idea. --Bounty OP
 	radio.use_command = TRUE
+	starting_location = get_area(loc)
 
 /obj/structure/desk_bell/departmental/wrench_act_secondary(mob/living/user, obj/item/tool)
 	balloon_alert(user, "indestructible!") //Nothing.
@@ -50,6 +54,11 @@
 		balloon_alert(user, "department notified")
 		var/message = "Assistance requested at [bell_location]."
 		radio.talk_into(src, message, radio_channel)
+		if(!antitheft && get_area() != starting_location) //antitheft
+			antitheft = TRUE
+			src.visible_message([span_warning("[src] starts flashing red and blares an alarm!")], blind_message = [span_hear("You hear an alarm faintly going off.")])
+			radio.talk_into(src, "Anti-Theft triggered, GPS signal established.", radio_channel)
+			AddComponent(/datum/component/gps, "DBELL-[radio_channel]")
 
 /obj/structure/desk_bell/departmental/security
 	radio_channel = FREQ_SECURITY
