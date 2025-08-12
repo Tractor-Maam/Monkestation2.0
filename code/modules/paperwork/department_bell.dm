@@ -24,7 +24,7 @@
 	radio = new(src)
 	radio.canhear_range = 0
 	radio.set_listening(FALSE)
-	radio.frequency = radio_channel
+	radio.set_frequency(radio_channel)
 	radio.freerange = TRUE
 	radio.freqlock = RADIO_FREQENCY_LOCKED
 	/*radio.command = TRUE // you want the clown to steal them and spam them in their office, be my guest and uncomment this.
@@ -34,10 +34,10 @@
 	balloon_alert(user, "indestructable!") //Nothing.
 	return FALSE
 
-/obj/structure/desk_bell/screwdriver_act(mob/living/user, obj/item/tool) //they cant break, so screwdriver anchors it
+/obj/structure/desk_bell/departmental/wrench_act(mob/living/user, obj/item/tool)
 	balloon_alert(user, "[anchored ? "un" : ""]securing...")
 	tool.play_tool_sound(src)
-	if(tool.use_tool(src, user, 10 SECONDS)) //twice as long as machine frames, those are REVERSE screws your average spaceman isnt prepared for that!.
+	if(tool.use_tool(src, user, 10 SECONDS))
 		balloon_alert(user, "[anchored ? "un" : ""]secured")
 		set_anchored(!anchored)
 		tool.play_tool_sound(src)
@@ -47,7 +47,7 @@
 /obj/structure/desk_bell/departmental/check_clapper(mob/living/user)
 	return //NOTHING.
 
-/obj/structure/desk_bell/MouseDrop(obj/over_object, src_location, over_location)
+/obj/structure/desk_bell/departmental/MouseDrop(obj/over_object, src_location, over_location)
 	if(istype(over_object, /obj/vehicle/ridden/wheelchair))
 		usr.balloon_alert(usr, "cannot use a department bell!")
 		return // makes absolutely certain this cant be used for a wheelchair bell
