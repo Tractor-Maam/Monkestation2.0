@@ -72,7 +72,6 @@
 		balloon_alert(user, "department notified")
 		var/message = "Assistance requested at [bell_location]."
 		radio.talk_into(src, message, radio_channel)
-		var/current_area = get_area(loc)
 		if(!antitheft && get_area(loc) != starting_location) //antitheft
 			antitheft = TRUE
 			src.visible_message(span_warning("[src] starts flashing red and blares an alarm!"))
