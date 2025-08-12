@@ -34,12 +34,11 @@
 	radio.use_command = TRUE
 	starting_location = get_area(loc)
 
-/* TODO correct context
+
 /obj/structure/desk_bell/departmental/add_context(atom/source, list/context, obj/item/held_item, mob/user)
-	. = ..()
 
 	if(held_item?.tool_behaviour == TOOL_WRENCH)
-		context[SCREENTIP_CONTEXT_RMB] = "Disassemble"
+		context[SCREENTIP_CONTEXT_LMB] = "Secure"
 		return CONTEXTUAL_SCREENTIP_SET
 
 	if(broken_ringer)
@@ -51,9 +50,8 @@
 			click_context = "Annoy"
 		context[SCREENTIP_CONTEXT_LMB] = click_context
 	return CONTEXTUAL_SCREENTIP_SET
-*/
+
 /obj/structure/desk_bell/departmental/wrench_act_secondary(mob/living/user, obj/item/tool)
-	balloon_alert(user, "indestructible!") //Nothing.
 	return FALSE
 
 /obj/structure/desk_bell/departmental/check_clapper(mob/living/user)
@@ -71,12 +69,12 @@
 		COOLDOWN_START(src, announce_cooldown, announce_cooldown_length)
 		balloon_alert(user, "department notified")
 		var/message = "Assistance requested at [bell_location]."
-		radio.talk_into(src, message, radio_channel)
 		if(!antitheft && get_area(loc) != starting_location) //antitheft
 			antitheft = TRUE
 			src.visible_message(span_warning("[src] starts flashing red and blares an alarm!"))
-			radio.talk_into(src, "Anti-Theft triggered, GPS signal established.", radio_channel)
+			message += " Anti-Theft triggered, GPS signal established."
 			AddComponent(/datum/component/gps, "DBELL-[radio_channel]")
+		radio.talk_into(src, message, radio_channel)
 
 /obj/structure/desk_bell/departmental/security
 	radio_channel = FREQ_SECURITY
