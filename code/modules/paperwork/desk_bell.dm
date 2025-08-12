@@ -124,3 +124,14 @@
 		return
 	target.attach_bell(src)
 	return ..()
+
+
+/obj/structure/desk_bell/wrench_act(mob/living/user, obj/item/tool)
+	balloon_alert(user, "[anchored ? "un" : ""]securing...")
+	tool.play_tool_sound(src)
+	if(tool.use_tool(src, user, 10 SECONDS)) //Using a wrench on a thing as small as a bell? unwieldy.
+		balloon_alert(user, "[anchored ? "un" : ""]secured")
+		set_anchored(!anchored)
+		tool.play_tool_sound(src)
+		return TOOL_ACT_TOOLTYPE_SUCCESS
+	return FALSE
