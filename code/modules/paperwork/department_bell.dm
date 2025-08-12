@@ -23,12 +23,11 @@
 	radio = new(src)
 	radio.canhear_range = 0
 	radio.set_listening(FALSE)
-	radio.recalculateChannels()
 	radio.frequency = radio_channel
 	radio.freerange = TRUE
 	radio.freqlock = RADIO_FREQENCY_LOCKED
-	radio.command = TRUE
-	radio.use_command = TRUE
+	/*radio.command = TRUE // you want the clown to steal them and spam them in their office, be my guest and uncomment this.
+	radio.use_command = TRUE*/
 
 /obj/structure/desk_bell/departmental/wrench_act_secondary(mob/living/user, obj/item/tool)
 	balloon_alert(user, "indestructable!") //Nothing.
