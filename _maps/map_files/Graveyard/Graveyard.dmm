@@ -22948,9 +22948,6 @@
 /obj/item/pen{
 	pixel_x = -7
 	},
-/obj/structure/desk_bell{
-	pixel_x = 6
-	},
 /obj/machinery/door/poddoor/shutters/preopen{
 	dir = 8;
 	id = "rndlab2";
@@ -22962,6 +22959,9 @@
 	req_access = list("science")
 	},
 /obj/machinery/door/firedoor,
+/obj/structure/desk_bell/departmental/science{
+	pixel_x = 6
+	},
 /turf/open/floor/iron/white,
 /area/station/science/lab)
 "iUL" = (
@@ -28891,9 +28891,6 @@
 /area/station/command/secure_bunker)
 "llq" = (
 /obj/structure/table/reinforced,
-/obj/structure/desk_bell{
-	pixel_x = -8
-	},
 /obj/machinery/door/window/left/directional/west{
 	req_access = list("atmospherics");
 	name = "Atmospherics Desk"
@@ -28905,6 +28902,9 @@
 	},
 /obj/machinery/door/firedoor,
 /obj/effect/turf_decal/tile/yellow/opposingcorners,
+/obj/structure/desk_bell/departmental/engineering{
+	pixel_x = -7
+	},
 /turf/open/floor/iron,
 /area/station/engineering/atmos/office)
 "llr" = (
@@ -29159,7 +29159,7 @@
 	name = "Security Brig Lockdown Shutters"
 	},
 /obj/machinery/door/window/brigdoor/security/cell/left/directional/east,
-/obj/structure/desk_bell,
+/obj/structure/desk_bell/departmental/security,
 /turf/open/floor/iron,
 /area/station/security/brig/entrance)
 "lrU" = (
@@ -35456,6 +35456,7 @@
 /obj/machinery/door/window/left/directional/east,
 /obj/structure/window/spawner/directional/south,
 /obj/machinery/door/firedoor,
+/obj/structure/desk_bell/departmental/medical,
 /turf/open/floor/iron/white,
 /area/station/medical/paramedic)
 "nJk" = (
@@ -38220,10 +38221,11 @@
 	name = "Genetics Privacy Shutters"
 	},
 /obj/structure/window/reinforced/spawner/directional/north,
-/obj/structure/desk_bell{
-	pixel_x = 6
-	},
 /obj/machinery/door/firedoor,
+/obj/structure/desk_bell/departmental/science{
+	bell_location = "Genetics Desk";
+	pixel_x = 7
+	},
 /turf/open/floor/iron,
 /area/station/science/genetics)
 "oKT" = (
@@ -43158,12 +43160,12 @@
 "qLd" = (
 /obj/structure/table/reinforced,
 /obj/effect/spawner/random/maintenance,
-/obj/structure/desk_bell{
-	pixel_x = 7
-	},
 /obj/machinery/door/window/right/directional/south{
 	name = "Cargo Desk";
 	req_access = list("shipping")
+	},
+/obj/structure/desk_bell/departmental/supply{
+	pixel_x = 7
 	},
 /turf/open/floor/iron,
 /area/station/cargo/sorting)
@@ -54086,7 +54088,7 @@
 	pixel_y = 3
 	},
 /obj/machinery/bluespace_vendor/directional/east,
-/obj/structure/desk_bell{
+/obj/structure/desk_bell/departmental/command/hop{
 	pixel_x = 7
 	},
 /turf/open/floor/iron,
