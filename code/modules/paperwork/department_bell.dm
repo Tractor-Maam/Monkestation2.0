@@ -1,11 +1,6 @@
 /obj/structure/desk_bell/departmental
 	name = "department bell"
 	desc = "The cornerstone of any customer service job. Ringing it sends an announcement to the relevant radio channel."
-	icon = 'icons/obj/bureaucracy.dmi'
-	icon_state = "desk_bell"
-	layer = OBJ_LAYER
-	anchored = FALSE
-	pass_flags = PASSTABLE // Able to place on tables
 
 	ring_cooldown_length = 0.6 SECONDS // twice as slow
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF // Nothing stops the bell.
