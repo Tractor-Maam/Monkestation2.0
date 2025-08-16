@@ -49,7 +49,7 @@
 		return
 
 	// are you sure
-	var/choice = tgui_alert(user, "Please make sure to Adminhelp and check for any available admins that can review your cassette before submitting, you will not be refunded if it is denied.", "Mailbox", list("Acknowledge", "Cancel"))
+	var/choice = tgui_alert(user, "Please make sure to Adminhelp and check for any available admins that can review your cassette before submitting, you will not be refunded if it is denied. If an admin does not review your cassette, and you are connected at the end of the round, you may be refunded.", "Mailbox", list("Acknowledge", "Cancel"))
 	if(choice != "Acknowledge")
 		return
 	///these two parts here should be commented out for local testing without a db
