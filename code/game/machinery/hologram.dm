@@ -472,7 +472,7 @@ Possible to do for anyone motivated enough:
 		if(!LAZYLEN(holo_calls))
 			set_can_hear_flags(CAN_HEAR_ACTIVE_HOLOCALLS, FALSE)
 
-	update_appearance()
+	update_appearance(UPDATE_ICON)
 	return TRUE
 
 /**
@@ -539,12 +539,12 @@ Possible to do for anyone motivated enough:
 
 	if(ringing != are_ringing)
 		ringing = are_ringing
-		update_appearance()
+		update_appearance(UPDATE_ICON)
 		return
 
 	if(outgoing_call)
 		outgoing_call.Check()
-		update_appearance()
+		update_appearance(UPDATE_ICON)
 
 
 /obj/machinery/holopad/proc/activate_holo(mob/living/user)
