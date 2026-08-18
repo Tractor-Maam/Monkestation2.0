@@ -756,11 +756,6 @@
 
 		ai_holocolor = hsv2rgb(default_hsv)
 
-	var/static/list/choices = assoc_to_keys(GLOB.ai_hologram_category_options) + HOLOGRAM_CHOICE_CHARACTER
-	var/choice = tgui_input_list(usr, "What kind of hologram do you want?",	"Customize", choices)
-	if(!choice)
-		return
-
 	var/input
 	switch(tgui_input_list(usr, "Would you like to select a hologram based on a custom character, an animal, or switch to a unique avatar?", "Customize", list("Custom Character","Unique","Animal")))
 		if("Custom Character")
