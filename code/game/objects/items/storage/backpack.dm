@@ -71,9 +71,12 @@
 
 /obj/item/bag_of_holding_inert/attackby(obj/item/item, mob/living/user, params)
 	if(istype(item, /obj/item/assembly/signaler/anomaly/bluespace))
+		if(!user.temporarilyRemoveItemFromInventory(item))
+			to_chat(user, span_warning("[item] is stuck to your hand!"))
+			return
+		user.temporarilyRemoveItemFromInventory(src, force = TRUE) // transmuting it into a functional one anyways
 		var/obj/item/storage/backpack/holding/doomsday_device = new /obj/item/storage/backpack/holding
 		qdel(item)
-		user.temporarilyRemoveItemFromInventory(src, force = TRUE)
 		user.put_in_hands(doomsday_device)
 		playsound(doomsday_device, 'sound/machines/click.ogg', 50, TRUE)
 		qdel(src)
