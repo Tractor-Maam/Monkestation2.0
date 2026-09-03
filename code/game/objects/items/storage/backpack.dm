@@ -69,13 +69,13 @@
 	resistance_flags = FIRE_PROOF
 	item_flags = NO_MAT_REDEMPTION
 
-/obj/item/bag_of_holding_inert/attackby(obj/item/item, mob/living/user, params)
-	if(istype(item, /obj/item/assembly/signaler/anomaly/bluespace))
-		if(!user.temporarilyRemoveItemFromInventory(item))
-			to_chat(user, span_warning("[item] is stuck to your hand!"))
+/obj/item/bag_of_holding_inert/item_interaction(mob/living/user, obj/item/tool, list/modifiers)
+	if(istype(tool, /obj/item/assembly/signaler/anomaly/bluespace))
+		if(!user.temporarilyRemoveItemFromInventory(tool))
+			to_chat(user, span_warning("[tool] is stuck to your hand!"))
 			return
 		var/obj/item/storage/backpack/holding/doomsday_device = new(get_turf(src))
-		qdel(item)
+		qdel(tool)
 		user.put_in_hands(doomsday_device)
 		playsound(doomsday_device, 'sound/machines/click.ogg', 50, TRUE)
 		qdel(src)
