@@ -74,8 +74,7 @@
 		if(!user.temporarilyRemoveItemFromInventory(item))
 			to_chat(user, span_warning("[item] is stuck to your hand!"))
 			return
-		user.temporarilyRemoveItemFromInventory(src, force = TRUE) // transmuting it into a functional one anyways
-		var/obj/item/storage/backpack/holding/doomsday_device = new /obj/item/storage/backpack/holding
+		var/obj/item/storage/backpack/holding/doomsday_device = new(get_turf(src))
 		qdel(item)
 		user.put_in_hands(doomsday_device)
 		playsound(doomsday_device, 'sound/machines/click.ogg', 50, TRUE)
