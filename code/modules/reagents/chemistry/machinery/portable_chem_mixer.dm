@@ -102,6 +102,9 @@
 	else
 		update_contents()
 
+/obj/item/storage/portable_chem_mixer/ex_act(severity, target)
+	return severity > EXPLODE_LIGHT ? ..() : FALSE
+
 /obj/item/storage/portable_chem_mixer/item_interaction(mob/living/user, obj/item/tool, list/modifiers)
 	if (!atom_storage.locked || \
 		(tool.item_flags & ABSTRACT) || \
