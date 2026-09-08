@@ -261,7 +261,6 @@
 	update_appearance()
 
 /obj/item/storage/portable_chem_mixer/item_ctrl_click(mob/user)
-	(mob/living/user)
 	if(atom_storage.locked == STORAGE_FULLY_LOCKED)
 		atom_storage.locked = STORAGE_NOT_LOCKED
 		replace_beaker(user)
