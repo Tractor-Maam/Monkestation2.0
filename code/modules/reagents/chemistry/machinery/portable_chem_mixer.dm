@@ -102,21 +102,22 @@
 	else
 		update_contents()
 
-/obj/item/storage/portable_chem_mixer/ex_act(severity, target)
-	return severity > EXPLODE_LIGHT ? ..() : FALSE
-
-/obj/item/storage/portable_chem_mixer/attackby(obj/item/weapon, mob/user, params)
+/obj/item/storage/portable_chem_mixer/item_interaction(mob/living/user, obj/item/tool, list/modifiers)
 	if (!atom_storage.locked || \
-		(weapon.item_flags & ABSTRACT) || \
-		(weapon.flags_1 & HOLOGRAM_1) || \
-		!is_reagent_container(weapon) || \
-		!weapon.is_open_container() \
+		(tool.item_flags & ABSTRACT) || \
+		(tool.flags_1 & HOLOGRAM_1) || \
+		!is_reagent_container(tool) || \
+		!tool.is_open_container() \
 	)
-		return ..()
+		return NONE // continue with regular storage handling
+	replace_beaker(user, tool)
+	ui_interact(user)
+	return ITEM_INTERACT_SUCCESS
 
-	replace_beaker(user, weapon)
-	update_appearance()
-	return TRUE
+/obj/item/storage/portable_chem_mixer/attack_self(mob/user)
+	if(loc == user)
+		if (atom_storage.locked)
+			ui_interact(user)
 
 /**
  * Replaces the beaker of the portable chemical mixer with another beaker, or simply adds the new beaker if none is in currently
