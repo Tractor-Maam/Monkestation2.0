@@ -122,6 +122,16 @@
 		if (atom_storage.locked)
 			ui_interact(user)
 
+/obj/item/storage/portable_chem_mixer/attack_hand(mob/user, list/modifiers)
+	if (loc != user)
+		return ..()
+	else
+		if (!atom_storage.locked)
+			return ..()
+	if(atom_storage?.locked)
+		ui_interact(user)
+		return
+
 /**
  * Replaces the beaker of the portable chemical mixer with another beaker, or simply adds the new beaker if none is in currently
  *
