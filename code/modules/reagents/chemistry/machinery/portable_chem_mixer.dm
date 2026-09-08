@@ -137,6 +137,7 @@
 		if(!user.transferItemToLoc(new_beaker, src))
 			return
 		beaker = new_beaker
+	update_appearance()
 
 /obj/item/storage/portable_chem_mixer/ui_interact(mob/user, datum/tgui/ui)
 	if(loc != user)
