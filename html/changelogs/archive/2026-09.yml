@@ -77,3 +77,24 @@
   - bugfix: Experimental Cloner Corruption is no longer a valid event for False Alarm.
   Tractor-Maam:
   - bugfix: AIs can now read program notifications from their PDA in the chat box.
+2026-09-09:
+  JupiterJaeden:
+  - spellcheck: Removes references to birth from tomas and monster hunter rabbits.
+  Tractor-Maam:
+  - qol: Bags of Holding can be slap crafted now.
+  hexakats:
+  - balance: the chameleon holster no longer fits on suit storage (this was done because
+      a lot of forms looked borked or have missing icons for suit storage, also it
+      already said that on the description before)
+  - refactor: moved more chameleon items from attackby to multitool_act for chameleon
+      locking
+  - code_imp: moved more chameleon items to chameleon.dm
+  - rscadd: Adds the auto shotgun case to the traitor uplink
+  - rscadd: Replaces the special ammo boxes with auto shotgun magazines that come
+      with said ammo types
+  - rscdel: Removes the renoster shotgun case from the traitor uplink
+  - balance: Trickshot shells now deal a total of 42 damage per shell when all pellets
+      hit
+  - balance: Uranium penetrator shells now have high armor penetration (75%)
+  notghosti:
+  - map: Boulder refinery room to boxstation
