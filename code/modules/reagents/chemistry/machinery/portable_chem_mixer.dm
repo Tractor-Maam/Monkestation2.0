@@ -31,6 +31,7 @@
 		/obj/item/reagent_containers/condiment,
 	))
 	register_context()
+	AddElement(/datum/element/drag_pickup)
 
 /obj/item/storage/portable_chem_mixer/Destroy()
 	dispensable_reagents.Cut()
