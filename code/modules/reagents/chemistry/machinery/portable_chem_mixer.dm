@@ -1,5 +1,5 @@
 /obj/item/storage/portable_chem_mixer
-	name = "Portable Chemical Mixer"
+	name = "portable chemical mixer"
 	desc = "A portable device that dispenses and mixes chemicals using the beakers inserted inside."
 	icon = 'icons/obj/medical/chemical.dmi'
 	icon_state = "portablechemicalmixer_open"
