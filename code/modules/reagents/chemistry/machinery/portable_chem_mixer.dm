@@ -39,7 +39,7 @@
 	return ..()
 
 /obj/item/storage/portable_chem_mixer/add_context(atom/source, list/context, obj/item/held_item, mob/user)
-	context[SCREENTIP_CONTEXT_CTRL_LMB] = "[atom_storage.locked ? "Un" : ""]Lock storage"
+	context[SCREENTIP_CONTEXT_CTRL_LMB] = "[atom_storage.locked ? "Unl" : "L"]ock storage"
 	if(atom_storage.locked && !QDELETED(beaker))
 		context[SCREENTIP_CONTEXT_ALT_LMB] = "Eject beaker"
 
