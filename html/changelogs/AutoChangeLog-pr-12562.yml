@@ -1,4 +1,0 @@
-author: "Veth-s"
-delete-after: True
-changes:
-  - balance: "Changed the number of joined players require for station goals to proc from 10 to 5."
