@@ -276,12 +276,9 @@
 
 /obj/item/storage/portable_chem_mixer/item_ctrl_click(mob/user)
 	if(atom_storage.locked == STORAGE_FULLY_LOCKED)
-		atom_storage.locked = STORAGE_NOT_LOCKED
 		replace_beaker(user)
 		SStgui.close_uis(src)
 	else
-		atom_storage.locked = STORAGE_FULLY_LOCKED
 		atom_storage.hide_contents(usr)
+	atom_storage.set_locked(atom_storage.locked ? STORAGE_NOT_LOCKED : STORAGE_FULLY_LOCKED)
 	atom_storage.click_alt_open = !atom_storage.locked
-
-	update_appearance()
