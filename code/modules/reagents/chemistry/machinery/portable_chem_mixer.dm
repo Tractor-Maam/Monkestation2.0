@@ -124,6 +124,7 @@
 	if(loc == user)
 		if (atom_storage.locked)
 			ui_interact(user)
+			return
 
 /obj/item/storage/portable_chem_mixer/attack_hand(mob/user, list/modifiers)
 	if (loc != user)
