@@ -25,6 +25,7 @@
 	antimagic_flags = MAGIC_RESISTANCE_HOLY
 	spell_requirements = NONE
 
+	///Time the revenant is revealed for when used, or the amount the reveal is extended by when already revealed.
 	var/reveal_duration = 5 SECONDS
 
 /datum/action/cooldown/spell/revenant_reveal/New(Target)
