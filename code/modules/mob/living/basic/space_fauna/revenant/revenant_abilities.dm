@@ -54,11 +54,7 @@
 	if(!istype(ghost))
 		stack_trace("[type] was cast on something not a revenant ([cast_on])")
 		return
-	var/datum/status_effect/revenant/revealed/affected = ghost.has_status_effect(/datum/status_effect/revenant/revealed)
-	if(!affected)
-		ghost.apply_status_effect(/datum/status_effect/revenant/revealed, reveal_duration)
-	else
-		affected.remove_duration(-reveal_duration) //theres a remove_duration proc but no add duration one?
+	ghost.adjust_timed_status_effect(reveal_duration, /datum/status_effect/revenant/revealed)
 
 /datum/action/cooldown/spell/aoe/revenant
 	panel = "Revenant Abilities (Locked)"
