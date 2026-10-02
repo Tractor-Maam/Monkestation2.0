@@ -121,7 +121,7 @@
 	return ITEM_INTERACT_SUCCESS
 
 /obj/item/storage/portable_chem_mixer/attack_hand(mob/user, list/modifiers)
-	if(atom_storage.locked)
+	if(atom_storage.locked && loc == user) // loc check because the balloon alert will show up on pickup otherwise
 		ui_interact(user)
 	return ..()
 
