@@ -120,6 +120,12 @@
 	ui_interact(user)
 	return ITEM_INTERACT_SUCCESS
 
+/obj/item/storage/portable_chem_mixer/attack_hand(mob/user, list/modifiers)
+	if(atom_storage.locked)
+		ui_interact(user)
+	return ..()
+
+
 /**
  * Replaces the beaker of the portable chemical mixer with another beaker, or simply adds the new beaker if none is in currently
  *
