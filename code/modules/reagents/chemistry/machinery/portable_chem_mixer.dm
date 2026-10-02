@@ -256,7 +256,7 @@
 	if(!atom_storage.locked)
 		balloon_alert(user, "lock first to use alt eject!")
 		return CLICK_ACTION_BLOCKING
-	if(!can_interact(user) || !user.can_perform_action(src, FORBID_TELEKINESIS_REACH))
+	if(!can_interact(user))
 		return
 
 	replace_beaker(user)
