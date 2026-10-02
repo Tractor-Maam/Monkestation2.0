@@ -250,7 +250,6 @@
 
 		if("eject")
 			replace_beaker(ui.user)
-			update_appearance()
 			return TRUE
 
 /obj/item/storage/portable_chem_mixer/click_alt(mob/living/user)
@@ -261,7 +260,6 @@
 		return
 
 	replace_beaker(user)
-	update_appearance()
 	return CLICK_ACTION_SUCCESS
 
 /obj/item/storage/portable_chem_mixer/item_ctrl_click(mob/user)
