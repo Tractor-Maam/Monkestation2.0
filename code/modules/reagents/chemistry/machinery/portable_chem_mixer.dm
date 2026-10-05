@@ -269,3 +269,4 @@
 		SStgui.close_uis(src)
 	atom_storage.set_locked(atom_storage.locked ? STORAGE_NOT_LOCKED : STORAGE_FULLY_LOCKED)
 	atom_storage.click_alt_open = !atom_storage.locked
+	return CLICK_ACTION_SUCCESS
